@@ -2,10 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Create Docker image') {
             steps {
-                echo 'Hello World'
                 sh 'docker build -t testingpipeline:v1 .'
+            }
+        }
+        stage('Create a container') {
+            steps {
+                sh 'docker run -d --name httpd -p 82:80 testingpipeline:v1'
             }
         }
     }
