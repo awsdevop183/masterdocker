@@ -13,7 +13,7 @@ pipeline {
             }
         }
         
-        stage('Create a container') {
+        stage('Post execution') {
             steps {
                 sh 'echo "commands executed successfully'
             }
