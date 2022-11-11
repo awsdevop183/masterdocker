@@ -12,5 +12,11 @@ pipeline {
                 sh 'docker run -d --name httpd -p 82:80 testingpipeline:v1'
             }
         }
+        
+        stage('Create a container') {
+            steps {
+                sh 'echo "commands executed successfully'
+            }
+        }
     }
 }
