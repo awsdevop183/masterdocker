@@ -22,7 +22,7 @@ pipeline {
         
         stage('Post execution') {
             steps {
-                sh 'echo "commands executed successfully'
+                echo 'commands executed successfully'
             }
         }
     }
