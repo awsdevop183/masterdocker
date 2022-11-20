@@ -7,11 +7,11 @@ pipeline {
                 sh 'docker build -t testingpipeline:v1 .'
             }
         }
-//         stage('Deleting old container') {
-//             steps {
-//                 sh 'docker rm -f httpd'
-//             }
-//         }
+        stage('Deleting old container') {
+            steps {
+                sh 'docker rm -f httpd'
+            }
+        }
         
         
         stage('Create a container') {
