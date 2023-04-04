@@ -1,13 +1,5 @@
- FROM centos:7
+ FROM nginx
 
-RUN yum install httpd -y
-
-
-WORKDIR /var/www/html/
-
+WORKDIR /usr/share/nginx/html
 
 COPY . .
-
-#CMD ["/usr/sbin/apachectl/", "-D", "FOREGROUND"]
-
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
